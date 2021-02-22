@@ -11,23 +11,14 @@
   TABLE OF CONTENTS
   |
   |
-  |___ Default CSS
+  |___ Import CSS
   | |
-  | |___ reset
   | |___ global
-  |
-  |
-  |___ Custom CSS
-  | |
-  | |___ main
+  | |___ custom
 
 ****************************************************************************************************/
 
-/* ------------------------ Default CSS ------------------------ */
+/* ------------------------ Import CSS ------------------------ */
 
-@import "default/reset";
-@import "default/global";
-
-/* ------------------------ Custom CSS ------------------------ */
-
-@import "custom/main";
+@import "global";
+@import "custom";
