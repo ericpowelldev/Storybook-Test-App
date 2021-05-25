@@ -1,23 +1,23 @@
-import { createMuiTheme } from "@material-ui/core/styles";
+import { createMuiTheme } from '@material-ui/core/styles';
 
 export default createMuiTheme({
   palette: {
     primary: {
       main: `#f44232`,
-      light: `#ff8876`,
-      dark: `#c83212`,
+      light: `#f88876`,
+      dark: `#e82010`,
       contrastText: `#ffffff`,
     },
     secondary: {
-      main: `#509090`,
-      light: `#88b4b4`,
-      dark: `#406464`,
+      main: `#486496`,
+      light: `#7696c0`,
+      dark: `#2b3d59`,
       contrastText: `#ffffff`,
     },
     tertiary: {
-      main: `#2b3d59`,
-      light: `#5072a0`,
-      dark: `#102030`,
+      main: `#509090`,
+      light: `#88b4b4`,
+      dark: `#406464`,
       contrastText: `#ffffff`,
     },
     quaternary: {
@@ -26,35 +26,54 @@ export default createMuiTheme({
       dark: `#e8a020`,
       contrastText: `#ffffff`,
     },
+
     info: {
-      main: `#2496ff`,
-      contrastText: `#ffffff`,
-    },
-    success: {
-      main: `#20c820`,
-      contrastText: `#ffffff`,
-    },
-    warning: {
-      main: `#ffa040`,
+      light: `#64b5f6`,
+      main: `#2080ff`,
+      dark: `#1976d2`,
       contrastText: `#ffffff`,
     },
     error: {
-      main: `#ff2040`,
+      light: `#ffa0a8`,
+      main: `#ff2050`,
+      dark: `#d41025`,
+      contrastText: `#ffffff`,
+    },
+    warning: {
+      light: `#ffb74d`,
+      main: `#ffa040`,
+      dark: `#f57c00`,
+      contrastText: `#ffffff`,
+    },
+    success: {
+      light: `#81c784`,
+      main: `#20c820`,
+      dark: `#388e3c`,
       contrastText: `#ffffff`,
     },
 
     text: {
       primary: `#323232`,
-      secondary: `#323232a0`,
-      tertiary: `#32323280`,
-      disabled: `#32323280`,
-      hint: `#32323280`,
+      secondary: `#32323296`,
+      disabled: `#32323272`,
+      hint: `#32323272`,
       contrast: `#ffffff`,
     },
 
-    divider: `#32323220`,
-    lightDivider: `#32323212`,
-    darkDivider: `#32323228`,
+    fade: [
+      `#00000010`,
+      `#00000020`,
+      `#00000030`,
+      `#00000040`,
+      `#00000050`,
+      `#00000060`,
+      `#00000080`,
+      `#000000a0`,
+      `#000000b4`,
+      `#000000c8`,
+    ],
+
+    border: `#ddd`,
 
     background: {
       default: `#ffffff`,
@@ -67,18 +86,25 @@ export default createMuiTheme({
   spacing: 4,
 
   shape: {
-    borderRadius: 6,
+    borderRadius: `4px`,
+    paperRadius: `8px`,
+  },
+
+  shadow: {
+    default: `0 0 12px #00000024`,
+    soft: `0 0 12px #00000016`,
+    harsh: `0 0 12px #00000032`,
   },
 
   breakpoints: {
     keys: {
-      ["0"]: `min`,
-      ["1"]: `xs`,
-      ["2"]: `sm`,
-      ["3"]: `md`,
-      ["4"]: `lg`,
-      ["5"]: `xl`,
-      ["6"]: `max`,
+      ['0']: `min`,
+      ['1']: `xs`,
+      ['2']: `sm`,
+      ['3']: `md`,
+      ['4']: `lg`,
+      ['5']: `xl`,
+      ['6']: `max`,
     },
     values: {
       min: 0,

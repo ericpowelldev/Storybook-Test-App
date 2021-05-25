@@ -1,5 +1,5 @@
-import React from "react";
-import Button from "./index";
+import React from 'react';
+import Button from './index';
 
 //////////////////////// EXPORT COMPONENT ////////////////////////
 export default {
@@ -24,13 +24,28 @@ export default {
         options: [`small`, `medium`, `large`],
       },
     },
+    children: {
+      control: {
+        type: `text`,
+      },
+    },
+    fullWidth: {
+      control: {
+        type: `boolean`,
+      },
+    },
     disabled: {
       control: {
         type: `boolean`,
-      }
+      },
     },
   },
 };
 
 //////////////////////// EXPORT TYPES ////////////////////////
-export const Default = (args) => <Button {...args}>My Button</Button>;
+export const Default = args => <Button {...args}>{args.children}</Button>;
+export const Primary_Contained = args => (
+  <Button color='primary' variant='contained'>
+    {args.children}
+  </Button>
+);

@@ -1,8 +1,8 @@
 {
-  "name": "storybook-test-app",
+  "name": "storybook-builder",
   "version": "0.1.0",
-  "author": "Eric Powell",
-  "description": "Testing Storybook for React",
+  "author": "HopDrive Devs",
+  "description": "Storybook builder app with ReactJS",
   "private": true,
   "browserslist": {
     "production": [
@@ -36,13 +36,13 @@
     "react-scripts": "^4.0.2"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^6.1.18",
-    "@storybook/addon-controls": "^6.1.18",
-    "@storybook/addon-essentials": "^6.1.18",
-    "@storybook/addon-links": "^6.1.18",
-    "@storybook/node-logger": "^6.1.18",
-    "@storybook/preset-create-react-app": "^3.1.6",
-    "@storybook/react": "^6.1.18",
+    "@storybook/addon-actions": "^6.2.9",
+    "@storybook/addon-controls": "^6.2.9",
+    "@storybook/addon-essentials": "^6.2.9",
+    "@storybook/addon-links": "^6.2.9",
+    "@storybook/node-logger": "^6.2.9",
+    "@storybook/preset-create-react-app": "^3.1.7",
+    "@storybook/react": "^6.2.9",
     "storybook-addon-material-ui": "^0.9.0-alpha.24"
   }
 }

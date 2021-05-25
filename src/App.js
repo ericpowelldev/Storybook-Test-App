@@ -1,12 +1,12 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import theme from "lib/theme";
-import { ThemeProvider } from "@material-ui/styles";
-import { CssBaseline } from "@material-ui/core";
+import theme from 'lib/theme';
+import { ThemeProvider } from '@material-ui/styles';
+import { CssBaseline } from '@material-ui/core';
 
-import Wrapper from "components/_Wrapper";
-import Home from "pages/Home";
+import Wrapper from 'components/_Wrapper';
+import Home from 'pages/Home';
 
 //////////////////////// COMPONENT ////////////////////////
 export default function App() {
@@ -16,7 +16,7 @@ export default function App() {
         <Wrapper>
           <CssBaseline />
           <Switch>
-            <Route exact path="/" component={() => <Home />} />
+            <Route exact path='/' component={() => <Home />} />
           </Switch>
         </Wrapper>
       </ThemeProvider>

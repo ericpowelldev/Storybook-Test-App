@@ -1,5 +1,5 @@
-import React from "react";
-import { useTheme, makeStyles, Typography, Tooltip, Icon, Menu, MenuItem } from "@material-ui/core";
+import React from 'react';
+import { useTheme, makeStyles, Typography, Tooltip, Icon, Menu, MenuItem } from '@material-ui/core';
 
 //////////////////////// COMPONENT ////////////////////////
 function Divide(props) {
@@ -10,7 +10,8 @@ function Divide(props) {
 
   const [actionsOpen, setActionsOpen] = React.useState(null);
 
-  if (children) var label = children.replace(/ /g, "\xa0").replace(/-/g, "-\u2060").toUpperCase();
+  if (children && children.length > 0)
+    var label = children.replace(/ /g, '\xa0').replace(/-/g, '-\u2060').toUpperCase();
 
   let lineColor;
   let labelColor;
@@ -28,16 +29,16 @@ function Divide(props) {
     labelColor = theme.palette.text.secondary;
   }
 
-  if (actions && actions.length > 0) var filteredActions = actions.filter((a) => !a.hide);
+  if (actions && actions.length > 0) var filteredActions = actions.filter(a => !a.hide);
 
-  const handleActionsOpen = (event) => {
+  const handleActionsOpen = event => {
     setActionsOpen(event.currentTarget);
   };
-  const handleActionsClose = (event) => {
+  const handleActionsClose = event => {
     setActionsOpen(null);
   };
 
-  const handleAction = (action) => {
+  const handleAction = action => {
     handleActionsClose();
     if (action.handler) action.handler();
   };
@@ -58,7 +59,7 @@ function Divide(props) {
               <div className={cls.line} style={{ background: lineColor }} />
               {tip ? (
                 <>
-                  <Tooltip placement="top" title={tip}>
+                  <Tooltip placement='top' title={tip}>
                     <Icon className={cls.tip} style={{ color: labelColor }}>
                       help
                     </Icon>
@@ -67,12 +68,18 @@ function Divide(props) {
               ) : null}
               {filteredActions && filteredActions.length > 0 ? (
                 <>
-                  <Tooltip placement="top" title="Actions">
+                  <Tooltip placement='top' title='Actions'>
                     <Icon onClick={handleActionsOpen} className={cls.actions} style={{ color: labelColor }}>
                       settings
                     </Icon>
                   </Tooltip>
-                  <Menu keepMounted id={`divide-actions-menu`} anchorEl={actionsOpen} open={Boolean(actionsOpen)} onClose={handleActionsClose}>
+                  <Menu
+                    keepMounted
+                    id={`divide-actions-menu`}
+                    anchorEl={actionsOpen}
+                    open={Boolean(actionsOpen)}
+                    onClose={handleActionsClose}
+                  >
                     {filteredActions.map((action, i) => (
                       <MenuItem key={`divide-action-${i}`} onClick={() => handleAction(action)}>
                         {action.label || `Action ${i + 1}`}
@@ -103,78 +110,78 @@ Divide.defaultProps = {
 export default Divide;
 
 //////////////////////// STYLES ////////////////////////
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
-    display: "flex",
-    verticalAlign: "top",
-    width: "100%",
+    display: 'flex',
+    verticalAlign: 'top',
+    width: '100%',
   },
   hold: {
-    display: "flex",
-    width: "100%",
-    height: "1px",
+    display: 'flex',
+    width: '100%',
+    height: '1px',
   },
   txt: {
-    justifySelf: "center",
-    margin: "2px 12px 0 12px",
-    fontSize: "18px",
+    justifySelf: 'center',
+    margin: '2px 12px 0 12px',
+    fontSize: 18,
     fontWeight: 500,
-    [theme.breakpoints.down("sm")]: {
-      margin: "2px 10px 0 10px",
-      fontSize: "15px",
+    [theme.breakpoints.down('sm')]: {
+      margin: '2px 10px 0 10px',
+      fontSize: 15,
     },
-    [theme.breakpoints.down("xs")]: {
-      margin: "2px 8px 0 8px",
-      fontSize: "12px",
+    [theme.breakpoints.down('xs')]: {
+      margin: '2px 8px 0 8px',
+      fontSize: 12,
     },
   },
   line: {
-    width: "100%",
-    height: "1px",
-    marginTop: "14px",
+    width: '100%',
+    height: '1px',
+    marginTop: '14px',
     background: theme.palette.text.disabled,
-    [theme.breakpoints.down("sm")]: {
-      marginTop: "12px",
+    [theme.breakpoints.down('sm')]: {
+      marginTop: '12px',
     },
-    [theme.breakpoints.down("xs")]: {
-      marginTop: "10px",
+    [theme.breakpoints.down('xs')]: {
+      marginTop: '10px',
     },
   },
   tip: {
-    margin: "4px 0 0 10px",
+    margin: '4px 0 0 10px',
     cursor: `pointer`,
-    fontSize: "21px",
-    [theme.breakpoints.down("sm")]: {
-      margin: "2px 0 0 8px",
+    fontSize: 21,
+    [theme.breakpoints.down('sm')]: {
+      margin: '2px 0 0 8px',
     },
-    [theme.breakpoints.down("xs")]: {
-      margin: "0 0 0 6px",
+    [theme.breakpoints.down('xs')]: {
+      margin: '0 0 0 6px',
     },
   },
   actions: {
-    margin: "4px 0 0 10px",
+    margin: '4px 0 0 10px',
     cursor: `pointer`,
-    fontSize: "21px",
-    [theme.breakpoints.down("sm")]: {
-      margin: "2px 0 0 8px",
+    fontSize: 21,
+    [theme.breakpoints.down('sm')]: {
+      margin: '2px 0 0 8px',
     },
-    [theme.breakpoints.down("xs")]: {
-      margin: "0 0 0 6px",
+    [theme.breakpoints.down('xs')]: {
+      margin: '0 0 0 6px',
     },
   },
   flatLine: {
-    width: "100%",
-    height: "1px",
+    width: '100%',
+    height: '1px',
     background: theme.palette.text.disabled,
   },
   spacer: {
-    width: "100%",
-    height: "48px",
-    [theme.breakpoints.down("sm")]: {
-      height: "36px",
+    width: '100%',
+    height: '48px',
+    [theme.breakpoints.down('sm')]: {
+      height: '36px',
     },
-    [theme.breakpoints.down("xs")]: {
-      height: "24px",
+    [theme.breakpoints.down('xs')]: {
+      height: '24px',
     },
   },
 }));

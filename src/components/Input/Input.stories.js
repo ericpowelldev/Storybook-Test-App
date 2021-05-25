@@ -1,5 +1,5 @@
-import React from "react";
-import Input from "./index";
+import React from 'react';
+import Input from './index';
 
 //////////////////////// EXPORT COMPONENT ////////////////////////
 export default {
@@ -78,4 +78,4 @@ export default {
 };
 
 //////////////////////// EXPORT TYPES ////////////////////////
-export const Default = (args) => <Input {...args} />;
+export const Default = args => <Input {...args} />;

@@ -1,5 +1,5 @@
-import React from "react";
-import { makeStyles, TextField } from "@material-ui/core";
+import React from 'react';
+import { makeStyles, TextField } from '@material-ui/core';
 
 //////////////////////// COMPONENT ////////////////////////
 function Input({ children, ...rest }) {
@@ -25,7 +25,7 @@ Input.defaultProps = {
 export default Input;
 
 //////////////////////// STYLES ////////////////////////
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   input: {
     // margin: 0,
   },

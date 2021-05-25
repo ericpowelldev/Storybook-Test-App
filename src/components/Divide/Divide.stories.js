@@ -1,14 +1,15 @@
-import React from "react";
-import Divide from "./index";
+import React from 'react';
+import Divide from './index';
 
 //////////////////////// EXPORT COMPONENT ////////////////////////
 export default {
   title: `Divide`,
   component: Divide,
   argTypes: {
-    actions: {
+    color: {
       control: {
-        type: `array`,
+        type: `inline-radio`,
+        options: [`default`, `light`, `dark`, `white`],
       },
     },
     children: {
@@ -16,18 +17,19 @@ export default {
         type: `text`,
       },
     },
-    color: {
+    tip: {
       control: {
-        type: `inline-radio`,
-        options: [`default`, `light`, `dark`, `white`],
+        type: `text`,
       },
     },
-    marginBottom: {
+    actions: {
       control: {
-        type: `range`,
-        min: 0,
-        max: 80,
-        step: 1,
+        type: `array`,
+      },
+    },
+    spacer: {
+      control: {
+        type: `boolean`,
       },
     },
     marginTop: {
@@ -38,18 +40,16 @@ export default {
         step: 1,
       },
     },
-    spacer: {
+    marginBottom: {
       control: {
-        type: `boolean`,
-      },
-    },
-    tip: {
-      control: {
-        type: `text`,
+        type: `range`,
+        min: 0,
+        max: 80,
+        step: 1,
       },
     },
   },
 };
 
 //////////////////////// EXPORT TYPES ////////////////////////
-export const Default = (args) => <Divide {...args}>{args.children}</Divide>;
+export const Default = args => <Divide {...args}>{args.children}</Divide>;

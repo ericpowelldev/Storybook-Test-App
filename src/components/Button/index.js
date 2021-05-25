@@ -1,5 +1,5 @@
-import React from "react";
-import { makeStyles, Button } from "@material-ui/core";
+import React from 'react';
+import { makeStyles, Button } from '@material-ui/core';
 
 //////////////////////// COMPONENT ////////////////////////
 function Btn({ children, ...rest }) {
@@ -13,22 +13,24 @@ function Btn({ children, ...rest }) {
 }
 
 Btn.defaultProps = {
+  children: `Button`,
   color: `default`,
-  variant: `text`,
-  size: `medium`,
   disabled: false,
+  fullWidth: false,
+  size: `medium`,
+  variant: `text`,
 };
 
 export default Btn;
 
 //////////////////////// STYLES ////////////////////////
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   button: {
     boxShadow: `none`,
-    "&:hover": {
+    '&:hover': {
       boxShadow: `none`,
     },
-    "&:active": {
+    '&:active': {
       boxShadow: `none`,
     },
   },
